@@ -146,6 +146,7 @@ def changepass():
 @login_required
 def checkprofile():
     connection = sqlite3.connect("track_me_run.db")
+    cursor = connection.cursor()
     return render_template("checkprofile.html")
 @app.route("/logout")
 def logout():
